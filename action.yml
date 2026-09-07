@@ -1,6 +1,6 @@
 name: "Preflight Scan"
 description: >-
-  Runs the Preflight check on a pull request: Checks pull requests against 30 known AI-code failure patterns: committed secrets, open databases, missing auth.
+  Checks pull requests against 30 known AI-code failure patterns: committed secrets, open databases, missing auth.
 branding:
   icon: "shield"
   color: "blue"
