@@ -28,7 +28,7 @@ inputs:
   api-url:
     description: "Preflight deployment base URL."
     required: false
-    default: "https://devmeth.com"
+    default: "https://dev-meth-web.vercel.app"
   timeout-minutes:
     description: "Give up polling the scan after this long (a full scan typically finishes in 1–3 minutes)."
     required: false
