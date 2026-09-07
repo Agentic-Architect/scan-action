@@ -1,0 +1,39 @@
+name: "Preflight Scan"
+description: >-
+  Runs the Preflight check on a pull request: the 30 known AI-code failure
+  patterns (committed secrets, open databases, missing auth). Writes a step
+  summary with masked findings and fails the step on Critical. Requires the
+  Preflight GitHub App installed on the repository.
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  repo:
+    description: "Repository to scan, owner/name. Defaults to this repository."
+    required: false
+    default: ${{ github.repository }}
+  pr:
+    description: "Pull request number. Defaults to the current pull_request event."
+    required: false
+    default: ${{ github.event.pull_request.number }}
+  fail-on:
+    description: "Fail the step when findings exist at this severity or worse: critical | high | medium | hygiene | never."
+    required: false
+    default: "critical"
+  api-key:
+    description: "Preflight API key (dvm_…). Optional — needed only to scan private repos, which belong to the key's org."
+    required: false
+    default: ""
+  api-url:
+    description: "Preflight deployment base URL."
+    required: false
+    default: "https://devmeth.com"
+  timeout-minutes:
+    description: "Give up polling the scan after this long (a full scan typically finishes in 1–3 minutes)."
+    required: false
+    default: "15"
+
+runs:
+  using: "node20"
+  main: "main.mjs"
