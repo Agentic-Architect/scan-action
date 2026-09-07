@@ -1,9 +1,6 @@
 name: "Preflight Scan"
 description: >-
-  Runs the Preflight check on a pull request: the 30 known AI-code failure
-  patterns (committed secrets, open databases, missing auth). Writes a step
-  summary with masked findings and fails the step on Critical. Requires the
-  Preflight GitHub App installed on the repository.
+  Runs the Preflight check on a pull request: Checks pull requests against 30 known AI-code failure patterns: committed secrets, open databases, missing auth.
 branding:
   icon: "shield"
   color: "blue"
