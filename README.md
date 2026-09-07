@@ -54,7 +54,7 @@ jobs:
 | `pr`              | PR number from the event | Pull request number.                                                  |
 | `fail-on`         | `critical`           | Fail the step at this severity or worse: `critical` / `high` / `medium` / `hygiene` / `never`. |
 | `api-key`         | _(empty)_            | Preflight API key (`dvm_…`) — required for private repos, which must belong to the key's org. |
-| `api-url`         | `https://devmeth.com` | Preflight deployment base URL.                                            |
+| `api-url`         | `https://dev-meth-web.vercel.app` | Preflight deployment base URL.                                            |
 | `timeout-minutes` | `15`                 | Poll limit for the scan (a full scan typically finishes in 1–3 minutes).    |
 
 ## Outputs
